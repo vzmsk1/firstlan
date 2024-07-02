@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ui</title>
+        <style>
+            ul,
+            li {
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <main style="background-color: #e0e0e0; padding-bottom: 20rem">
+                <div
+                    style="
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        row-gap: 3rem;
+                        padding: 5rem;
+                    "
+                    class="container"
+                >
+                    <!-- typography -->
+                    <div style="text-align: center">
+                        <div class="h h_h1">heading</div>
+                        <div class="h h_h2">heading</div>
+                        <div class="h h_h3">heading</div>
+                        <div class="txt18">text</div>
+                        <div class="txt14">text</div>
+                        <div class="txt-uc">text</div>
+                        <div class="txt-uc txt-uc_solid">text</div>
+                    </div>
+
+                    <!-- radio buttons -->
+                    <div style="display: flex; flex-direction: column; align-items: center; row-gap: 3rem">
+                        <label class="option option_checkbox">
+                            <input type="checkbox" name="form[]" value="1" class="option__input" />
+                            <span class="option__txt">checkbox</span>
+                        </label>
+                    </div>
+
+                    <!-- buttons -->
+                    <div style="display: flex; gap: 2rem">
+                        <button type="button" class="btn">
+                            <span class="btn__txt txt-uc txt-uc_solid">узнать больше</span>
+                            <span class="btn__i-btn i-btn">
+                                <svg class="i-btn__icon">
+                                    <use href="#arr-svg"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn_white">
+                            <span class="btn__txt txt-uc txt-uc_solid">узнать больше</span>
+                            <span class="btn__i-btn i-btn">
+                                <svg class="i-btn__icon">
+                                    <use href="#arr-svg"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="slider-nav">
+                        <button type="button" class="i-btn i-btn_prev">
+                            <svg class="i-btn__icon">
+                                <use href="#arr-svg"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="i-btn i-btn_next">
+                            <svg class="i-btn__icon">
+                                <use href="#arr-svg"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="slider-nav">
+                        <button type="button" class="i-btn i-btn_white i-btn_prev">
+                            <svg class="i-btn__icon">
+                                <use href="#arr-svg"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="i-btn i-btn_white i-btn_next">
+                            <svg class="i-btn__icon">
+                                <use href="#arr-svg"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div style="display: flex; gap: 2rem">
+                        <button type="button" class="i-btn i-btn_gray">
+                            <svg class="i-btn__icon">
+                                <use href="#arr-angle-svg"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- inputs -->
+                    <form
+                        data-dev
+                        action="#"
+                        style="display: flex; flex-direction: column; align-items: center; row-gap: 5rem"
+                    >
+                        <div data-hint="Поле заполнено неверно" class="input">
+                            <input
+                                data-validate
+                                data-required
+                                autocomplete="off"
+                                type="text"
+                                name="form[]"
+                                placeholder="Имя"
+                                class="input__field"
+                            />
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+        <include src="./components/svg.html"></include>
+    </body>
+</html>
