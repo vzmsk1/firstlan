@@ -23,11 +23,16 @@ export const getHash = () => {
 export const menuInit = () => {
     const mm = window.matchMedia('(max-width: 768px)');
 
-    if (document.querySelector('.hamburger')) {
-        document.addEventListener('click', function (e) {
-            const isActive = document.documentElement.classList.contains('_menu-opened');
-            if (e.target.closest('.hamburger') || (!e.target.closest('.menu-header') && isActive)) {
-                !isActive ? menuOpen() : menuClose();
+    if (document.querySelector('.header__hamburger')) {
+        document.querySelector('.header__hamburger').addEventListener('click', function (e) {
+            document.documentElement.classList.toggle('_menu-opened');
+            bodyLockToggle();
+        });
+
+        mm.addEventListener('change', function () {
+            if (!mm.matches) {
+                document.documentElement.classList.remove('_menu-opened');
+                bodyUnlock();
             }
         });
     }

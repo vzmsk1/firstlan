@@ -1,0 +1,133 @@
+.header {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    &__container {
+        position: relative;
+        z-index: 50;
+
+        padding: 2.2rem 0;
+
+        display: flex;
+        align-items: center;
+
+        color: $white;
+
+        @media (max-width: 48em) {
+            padding: 4rem 3.2rem;
+        }
+    }
+
+    &__logo-wrap {
+        margin-right: 16.3rem;
+
+        flex: 0 0 18.3rem;
+        width: 18.3rem;
+
+        @media (max-width: 48em) {
+            margin-right: auto;
+
+            flex: 0 0 23.8rem;
+            width: 23.8rem;
+        }
+    }
+
+    &__logo {
+        &_black {
+            display: none;
+        }
+
+        ._menu-opened & {
+            display: none;
+
+            &_black {
+                display: inline-block;
+            }
+        }
+
+        @media (max-width: 48em) {
+            height: 9.6rem;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        column-gap: 3.5rem;
+
+        @media (min-width: 48em) {
+            margin-right: auto;
+        }
+    }
+
+    &__nav-link {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    &__tel {
+        margin-right: 6rem;
+
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    &__actions {
+        display: flex;
+        column-gap: 2.4rem;
+    }
+
+    &__action-txt {
+        @media (min-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__action-icon {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    &__hamburger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 9.6rem;
+        width: 9.6rem;
+        height: 9.6rem;
+
+        background-color: $white;
+
+        transition: background-color 0.3s ease;
+
+        ._menu-opened & {
+            background-color: $black;
+        }
+
+        @media (min-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__hamburger-icon {
+        width: 4.8rem;
+        height: 2.4rem;
+
+        &_close {
+            display: none;
+        }
+
+        ._menu-opened & {
+            display: none;
+
+            &_close {
+                display: inline-block;
+            }
+        }
+    }
+}
